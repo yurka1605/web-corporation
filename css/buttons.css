@@ -110,6 +110,48 @@ input {
   padding-right: 16px;
 }
 
+.radio label {
+  position: relative;
+  display: flex;
+  padding-left: 41px;
+  font-size: 18px;
+  color: #000000;
+  line-height: 27px;
+  cursor: pointer;
+}
+
+.radio label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #FFFFFF;
+  border: 0.8px solid #B7B7B7;
+  border-radius: 50%;
+  transition: all .2 linear;
+}
+
+.radio label::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.radio input {
+  display: none;
+}
+
+.radio input:checked + label::before {
+  background-color: #3F4156;
+  border: 0.8px solid #3F4156;
+}
+
 @media (max-width: 576px) {
   .edit-btn img {
     height: 8px;

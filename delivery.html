@@ -7,7 +7,7 @@
   <title>Web corporation</title>
   <link rel="stylesheet" href="./css/libs/nice-select.css">
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/pages/data.css">
+  <link rel="stylesheet" href="./css/pages/delivery.css">
 </head>
 <body>
   <header class="header">
@@ -44,7 +44,7 @@
           </svg>
           <a href="#">Об организации</a>
         </li>
-        <li class="menu-list__item menu-list__item--active">
+        <li class="menu-list__item">
           <a href="./data.html">Данные</a>
         </li>
         <li class="menu-list__item">
@@ -59,38 +59,65 @@
         <li class="menu-list__item">
           <a href="./products.html">Товары и услуги</a>
         </li>
-        <li class="menu-list__item">
+        <li class="menu-list__item menu-list__item--active">
           <a href="./delivery.html">Доставка</a>
         </li>
       </ul>
     </aside>
-    <section class="main data">
-      <h1>Данные</h1>
-      <div class="data-contant">
-        <h3 class="data-header">Основные</h3>
-        <h4>Статус в профиле и на картах</h4>
-        <p>
-          Измените статус работы на актуальный, если вы больше не работаете  или закрылись на
-          ремонт и хотите сообщить об этом пользователям
-        </p>
-        <form name="data">
-          <select>
-              <option value="true" selected="selected">Работает</option>
-              <option value="false">Не работает</option>
-          </select>
-          <label for="logo">Логотип</label>
-          <div class="new-logo pointer">
-            <img id="Logotype" src="./assets/menu/logotype.png" alt="Logotype">
-            <img src="./assets/pen.png" alt="edit" class="edit-logo">
-            <input type="file" name="logo" accept="image/*,image/jpeg">
+    <section class="main delivery">
+      <h1>Новая служба доставки</h1>
+      <form class="delivery-form">
+        <div class="delivery-types">
+          <div class="radio">
+            <input checked type="radio" id="courierService" name="deliveryType" value="courierService" />
+            <label for="courierService">Курьерская служба</label>
           </div>
-          <label for="about">
-            <span>О компании</span>
-            <p>не больше 200 символов</p>
-          </label>
-          <textarea name="about" maxlength="200">Web Corporation - это информационный сервис</textarea>
-        </form>
-      </div>
+          <div class="radio">
+            <input type="radio" id="pickup" name="deliveryType" value="pickup"/>
+            <label for="pickup">Самовывоз</label>
+          </div>
+        </div>
+        <h3>Стоимость</h3>
+        <div class="delivery-cost">
+          <div class="radio">
+            <input checked type="radio" id="free" name="cost" value="free" />
+            <label for="free">Бесплатно</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="limitFree" name="cost" value="limitFree"/>
+            <label for="limitFree">Бесплатно от определённой суммы</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="range" name="cost" value="range" />
+            <label for="range">Диапазон цен</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="fixed" name="cost" value="fixed"/>
+            <label for="fixed">Фиксированная цена</label>
+          </div>
+        </div>
+        <div class="delivery-textarea">
+          <p><span class="delivery-textarea-length">0</span>/400</p>
+          <textarea
+            maxlength="400"
+            name="other"
+            placeholder="Другие условия доставки"
+          ></textarea>
+        </div>
+        <h3>Срок</h3>
+        <div class="delivery-time">
+          <input type="text" placeholder="От">
+          <input type="text" placeholder="До">
+          <p>календарных дней</p>
+        </div>
+        <h3>Территория доставки</h3>
+        <textarea
+          name="territory"
+          class="delivery-territory"
+          placeholder="Регионы доставки"
+        ></textarea>
+        <button class="submit-btn">Сохранить</button>
+      </form>
     </section>
   </main>
 
@@ -99,13 +126,8 @@
   <script src="./js/libs/jquery.nice-select.js"></script>
   <script src="./js/index.js"></script>
   <script>
-    $('.new-logo input').change(event => {
-      const file = event.target.files[0];
-      const fileReader = new FileReader();
-      fileReader.onload = function(e) {
-        $('#Logotype').attr('src', e.target.result);
-      };
-      fileReader.readAsDataURL(file);
+    $('.delivery-textarea textarea').on('change keyup paste', data => {
+      $('.delivery-textarea-length').text(data.target.value.length);
     });
   </script>
 </body>
