@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import './_reset.css';
+@import './_vars.css';
+@import './buttons.css';
+@import './header.css';
+@import './menu.css';
+
+/* Blocks */
+@import './blocks/geo.css';
+@import './blocks/views.css';
+@import './blocks/reviews.css';
+@import './blocks/statistic.css';
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  font-display: swap;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #000000;
+}
+
+main {
+  display: flex;
+  height: calc(100% - var(--header-height));
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  border: 1px solid #D1D3EB;
+  border-radius: 6px;
+  outline: none;
+  padding: 16px;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 16px;
+  color: #000000;
+}
+
+.main {
+  padding: 60px;
+  padding-right: 186px;
+  background: #FFFFFF;
+  width: calc(100% - var(--menu-width));
+  height: calc(100% - var(--header-height));
+}
+
+.main-blocks {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 185px 400px;
+  width: 100%;
+  height: fit-content;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+.container {
+  width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.growth {
+  color: #46D354;
+}
+
+.loss {
+  color: #F05F5F;
+}
+
+
+@media (max-width: 576px) {
+  .main {
+    padding: 32px 0 40px 0;
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--main-container-max-width-sm);
+  }
+
+  .container-padding-bottom {
+    padding-bottom: var(--main-container-padding-bottom);
+  }
+}

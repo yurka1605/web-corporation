@@ -1,0 +1,44 @@
+.geo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.geo h1 {
+  font-weight: 600;
+  font-size: 44px;
+}
+
+.position {
+  display: flex;
+  align-items: center;
+  margin: 4px 0 24px 0;
+}
+
+.position img {
+  display: block;
+  width: 14px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.position span {
+  font-weight: 300;
+  font-size: 20px;
+  color: #3F4156;
+}
+
+@media (max-width: 576px) {
+  .geo {
+    display: block;
+  }
+
+  .geo h1 {
+    font-size: 24px;
+  }
+
+  .position img {
+    width: 11px;
+    height: 14px;
+  }
+}

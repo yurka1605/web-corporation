@@ -1,0 +1,24 @@
+:root {
+  --header-height: 80px;
+  --menu-width: 287px;
+  
+  --main-container-max-width-sm: 360px;
+  --main-container-max-width-md: 360px;
+  --main-container-max-width-lg: 360px;
+  --main-container-max-width-xl: 360px;
+  --main-container-padding-bottom: 24px;
+
+  --block-text-color: #111220;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1600px;
+}
+
+@media (max-width: 576px) {
+  :root {
+    --header-height: 55px;
+  }
+}
