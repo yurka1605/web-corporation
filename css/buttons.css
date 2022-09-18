@@ -5,6 +5,7 @@
   padding: 13px 25px;
   background: #EFEFEF;
   border-radius: 19.8px;
+  max-width: 100%;
 }
 
 .edit-btn img {
@@ -25,6 +26,31 @@
   border-radius: 10px;
   font-size: 20px;
   color: #FFFFFF;
+  max-width: 100%;
+}
+
+.enabled-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 60px;
+  border: 2px solid #727595;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.enabled-btn svg {
+  width: 15px;
+  height: 15px;
+  fill: #3F4156;
+}
+
+.enabled-btn span {
+  padding-left: 13.5px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #3F4156;
 }
 
 .nice-select {

@@ -1,0 +1,119 @@
+.paid-services h1 {
+  font-size: 44px;
+}
+
+.paid-services h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.paid-services-cards {
+  display: grid;
+  grid-template-columns: calc((100% - 120px)/3) calc((100% - 120px)/3) calc((100% - 120px)/3);
+  column-gap: 60px;
+  row-gap: 32px;
+  padding: 40px 0 60px;
+}
+
+.paid-services-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #D1D3EB;
+  border-radius: 15px;
+  padding: 28px 28px 32px 28px;
+}
+
+.card-list {
+  padding: 28px 0 60px;
+}
+
+.card-list__item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 18px;
+  color: #000000;
+  max-width: 300px;
+}
+
+.card-list__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.card-list__item::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  top: 9px;
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
+  min-height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.card-price {
+  margin-bottom: 16px;
+}
+
+.card-price__amount {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  color: #000000;
+}
+
+.card-price__time {
+  font-size: 16px;
+  color: #000000;
+}
+
+.submit-btn {
+  width: 240px;
+  height: 60px;
+}
+
+.paid-services-examples {
+  display: grid;
+  grid-template-columns: calc(50% - 23px) calc(50% - 23px);
+  column-gap: 46px;
+}
+
+.paid-services-example {
+  display: grid;
+  grid-template-columns: 190px calc(100% - 190px);
+  column-gap: 43px;
+  background: #FFFFFF;
+  border: 1px solid #D1D3EB;
+  border-radius: 15px;
+  padding: 40px 54px 40px 28px;
+}
+
+.paid-services-example img {
+  display: block;
+  width: 190px;
+  height: 190px;
+}
+
+.example-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.example-info .card-list {
+  padding: 16px 0 34px;
+}
+
+.example-info .card-list__item {
+  max-width: 350px;
+  padding-left: 6px;
+}
+
+.example-info .card-list__item::before {
+  top: 10px;
+}
