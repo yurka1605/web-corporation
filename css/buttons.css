@@ -38,6 +38,7 @@
   border: 2px solid #727595;
   border-radius: 10px;
   max-width: 100%;
+  background-color: transparent;
 }
 
 .enabled-btn svg {

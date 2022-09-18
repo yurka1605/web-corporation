@@ -26,6 +26,11 @@
   padding: 28px 28px 32px 28px;
 }
 
+.paid-services-card--enabled {
+  background: url('../../assets/card-enabled-bg.png');
+  background-size: cover;
+}
+
 .card-list {
   padding: 28px 0 60px;
 }
