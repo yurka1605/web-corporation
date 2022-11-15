@@ -11,7 +11,8 @@
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  padding: 23px 186px 23px 28px;
+  padding-right: 186px;
+  padding-left: 28px;
 }
 
 .header__user {
@@ -35,7 +36,7 @@
   display: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
   .header__user {
     display: none;
   }
@@ -44,8 +45,18 @@
     display: block;
   }
 
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 576px) {
   .header .container {
-    padding: 0;
-    max-width: var(--main-container-max-width-sm);
+    padding: 0!important;
+    max-width: calc(100% - 32px);
   }
 }

@@ -1,4 +1,4 @@
-const ctx = document.getElementById('myChart');
+let viewsChart, fSize;
 const labels = [
   '25 июля',
   '26 июля',
@@ -14,69 +14,89 @@ const data = {
   datasets: [
     {
       label: 'Было',
-      data: [210, 170, 190, 270, 200, 260, 210],
+      data: [190, 150, 170, 250, 180, 240, 190],
       backgroundColor: '#6C77EC',
       borderRadius: 10,
     },
     {
       label: 'Прирост',
-      data: [30, 15, 25, 15, 15, 10, 25],
+      data: [50, 35, 45, 35, 35, 30, 45],
       backgroundColor: '#F67E7E',
       borderRadius: 10,
     },
   ]
 };
 
-const viewsChart = new Chart(
-  document.getElementById('viewsChart'),
-  {
-    type: 'bar',
-    data,
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
-      scales: {
-        x: {
-          alignToPixels: true,
-          autoSkip: true,
-          autoSkipPadding: 14,
-          stacked: true,
-          grid: {
+updateChart();
+$(window).on('resize', () => updateChart());
+
+function updateChart() {
+  const windowWidth = $(window).width();
+
+  if (windowWidth < 1280) {
+    fSize = 8; 
+  } else if (windowWidth < 1440) {
+    fSize = 12; 
+  } else {
+    fSize = 16;
+  }
+
+  if (viewsChart) {
+    viewsChart.destroy();
+    viewsChart = null;
+  }
+
+  viewsChart = new Chart(
+    document.getElementById('viewsChart'),
+    {
+      type: 'bar',
+      data,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
             display: false,
-            drawBorder: false,
-          },
-          ticks: {
-            padding: 12,
-            font: {
-              size: 16
-            },
-            color: '#3F4156',
           },
         },
-        y: {
-          alignToPixels: true,
-          stacked: true,
-          maxTicksLimit: 3,
-          position: 'right',
-          ticks: {
-            padding: 14,
-            stepSize: 100,
-            font: {
-              size: 16
+        scales: {
+          x: {
+            alignToPixels: true,
+            autoSkip: true,
+            autoSkipPadding: 14,
+            stacked: true,
+            grid: {
+              display: false,
+              drawBorder: false,
             },
-            color: '#3F4156',
+            ticks: {
+              padding: 12,
+              font: {
+                size: fSize
+              },
+              color: '#3F4156',
+            },
           },
-          grid: {
-            color: '#DEE0F4',
-            drawBorder: false,
+          y: {
+            alignToPixels: true,
+            stacked: true,
+            maxTicksLimit: 3,
+            position: 'right',
+            ticks: {
+              padding: 14,
+              stepSize: 100,
+              font: {
+                size: fSize
+              },
+              color: '#3F4156',
+            },
+            grid: {
+              color: '#DEE0F4',
+              drawBorder: false,
+            }
           }
         }
       }
     }
-  }
-);
+  ); 
+}

@@ -28,6 +28,25 @@
   color: #3F4156;
 }
 
+@media (max-width: 1440px) {
+  .geo h1 {
+    font-size: 32px;
+  }
+
+  .position span {
+    font-size: 16px;
+  }
+
+  .edit-btn img {
+    height: 16px;
+    width: 16px;
+  }
+
+  .edit-btn span {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 576px) {
   .geo {
     display: block;

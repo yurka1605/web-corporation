@@ -156,10 +156,9 @@
 }
 
 .reviews-content-item__feedback {
-  padding: 30px 32px 32px 74px;
+  margin: 30px 32px 32px 74px;
   font-size: 18px;
   color: #000000;
-  max-height: 162px;
 }
 
 .reviews-content-item__feedback a {

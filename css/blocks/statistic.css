@@ -50,3 +50,47 @@
   justify-content: space-between;
   color: #6C77EC;
 }
+
+@media (max-width: 1440px) {
+  .statistic-header-text h2 {
+    font-size: 22px;
+  }
+
+  .statistic-header svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  .statistic {
+    padding: 23px 15px;
+    border: 0.732106px solid #D1D3EB;
+    border-radius: 10px;
+  }
+  .statistic-header-text h2 {
+    font-size: 16px;  
+  }
+
+  .statistic-header svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .statistic-header-text p {
+    font-size: 12px;
+  }
+
+  .statistic-table td {
+    padding-bottom: 16px;
+  }
+
+  .statistic-table {
+    margin-bottom: 18px;
+  }
+
+  .statistic-link svg {
+    width: 10px;
+    height: 12px;
+  }
+}

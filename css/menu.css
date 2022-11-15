@@ -1,10 +1,24 @@
 .menu {
+  position: relative;
   display: block;
   max-width: 60vw;
   width: var(--menu-width);
+  min-width: var(--menu-width);
   padding: 60px 27px;
   background-color: #27293D;
   color: #FFFFFF;
+  user-select: none;
+}
+
+.menu-close {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  height: 20px;
+  width: 20px;
+  z-index: 1;
 }
 
 .menu-list__item {
@@ -60,4 +74,25 @@
 
 .menu-list__item--active a {
   color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    min-height: 100vh;
+    transform: translateX(100%);
+    transition: all .3s linear;
+    z-index: 9;
+  }
+
+  body.show-menu .menu {
+    transform: translateX(0);
+  }
+
+  .menu-close {
+    display: block;
+  }
 }
