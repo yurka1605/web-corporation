@@ -29,3 +29,23 @@
   color: #000000;
   margin-bottom: 32px;
 }
+
+@media (max-width: 576px) {
+  .popup {
+    width: calc(100vw - 32px);
+    max-height: calc(100vh - 50px);
+    padding: 20px 17px 25px 20px;
+  }
+
+  .popup h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .popup-close {
+    top: 20px;
+    right: 20px;
+    height: 26px;
+    width: 26px;
+  }
+}
