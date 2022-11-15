@@ -1,3 +1,4 @@
+h1,
 .paid-services h1 {
   font-size: 44px;
 }
@@ -121,4 +122,116 @@
 
 .example-info .card-list__item::before {
   top: 10px;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 24px;
+  }
+  .paid-services-cards {
+    grid-template-columns: calc((100% - 40px)/2)  calc((100% - 40px)/2);
+    column-gap: 40px;
+    row-gap: 36px;
+    padding-bottom: 36px;
+  }
+  .paid-services h2 {
+    font-size: 18px;
+  }
+  .card-list__item {
+    font-size: 16px;
+  }
+  .enabled-btn,
+  .submit-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .enabled-btn span {
+    font-size: 16px;
+  }
+
+  .enabled-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .paid-services-examples {
+    grid-template-columns: 100%;
+    row-gap: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    margin: 0 auto;
+    width: calc(100vw - 32px);
+  }
+
+  .paid-services-cards {
+    grid-template-columns: 100%;
+  }
+
+  .card-price {
+    margin-bottom: 16px;
+  }
+
+  .card-price__amount {
+    font-size: 18px;
+  }
+  .card-price__time {
+    font-size: 14px;
+  }
+
+  .paid-services-example {
+    position: relative;
+    grid-template-columns: 90px calc(100% - 106px);
+    padding: 24px 10px 100px 14px;
+    column-gap: 16px;
+  }
+
+  .paid-services-example img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .example-info {
+    justify-content: flex-start;
+  }
+
+  .example-info h4 {
+    font-size: 18px;
+  }
+
+  .example-info .card-list {
+    font-size: 14px;
+    padding: 7px 0 0 0;
+  }
+
+  .example-info .card-list__item {
+    font-size: 14px;
+    padding-left: 0px;
+  }
+
+  .example-info .submit-btn {
+    position: absolute;
+    left: 14px;
+    bottom: 20px;
+  }
+
+  .card-list__item::before {
+    width: 6px;
+    min-width: 6px;
+    height: 6px;
+    min-height: 6px;
+    margin-right: 8px;
+  }
+
+  .example-info .card-list__item::before {
+    top: 6.5px;
+  }
+
+  .paid-services-card--enabled {
+    grid-row: 1;
+  }
 }
