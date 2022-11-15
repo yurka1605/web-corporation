@@ -68,6 +68,7 @@
 
 .nice-select .list {
   width: 261px;
+  max-width: 100%;
 }
 
 .nice-select::after {
