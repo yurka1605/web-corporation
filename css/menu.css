@@ -86,6 +86,7 @@
     transform: translateX(100%);
     transition: all .3s linear;
     z-index: 9;
+    overflow-y: auto;
   }
 
   body.show-menu .menu {

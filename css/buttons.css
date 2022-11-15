@@ -189,4 +189,8 @@ input {
   .edit-btn span {
     font-size: 10px;
   }
+
+  .nice-select {
+    font-size: 16px;
+  }
 }
